@@ -17,8 +17,8 @@ public class CovidCaseService {
     @Autowired
     private CovidCaseRepository covidCaseRepository;
 
-    public Page<CovidCase> findAllCases(Pageable pageable){
-        return covidCaseRepository.findAll(pageable);
+    public List<CovidCase> findAllCases(){
+        return covidCaseRepository.findAll();
     }
 
     public CovidCase insertCase(CovidCase covidCase){

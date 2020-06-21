@@ -17,17 +17,18 @@ public class CovidCase implements Serializable {
     private Double latitude;
     private Double longitude;
     private Integer status;
+    private Double distance;
 
     public CovidCase() {
     }
 
-    public CovidCase(Integer id, Double latitude, Double longitude, CaseType status) {
+    public CovidCase(Integer id, Double latitude, Double longitude, CaseType status, Double distance) {
         this.id = id;
         this.latitude = latitude;
         this.longitude = longitude;
         this.status = status.getCod();
+        this.distance = distance;
     }
-
 
     public Integer getId() {
         return id;
@@ -53,8 +54,16 @@ public class CovidCase implements Serializable {
         this.longitude = longitude;
     }
 
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
     public CaseType getStatus() {
-        return CaseType.toEnum(status);
+         return CaseType.toEnum(status);
     }
 
     public void setStatus(CaseType status) {

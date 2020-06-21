@@ -9,7 +9,7 @@ public enum CaseType {
     private int cod;
     private String covidCase;
 
-    private CaseType(int cod, String covidCase) {
+    CaseType(int cod, String covidCase) {
         this.cod = cod;
         this.covidCase = covidCase;
     }
